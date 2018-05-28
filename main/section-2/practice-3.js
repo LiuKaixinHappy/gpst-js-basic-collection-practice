@@ -15,7 +15,6 @@ module.exports = function countSameElements(collection) {
         return `${elem}-1`;
     });
 
-    console.log(collection);
     let tmp = collection.reduce((total, current) =>
         ((total[current.split('-')[0]] += parseInt(current.split('-')[1]))
         || (total[current.split('-')[0]] = parseInt(current.split('-')[1])), total), {});
